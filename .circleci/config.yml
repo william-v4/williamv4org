@@ -1,0 +1,22 @@
+version: 2.1
+workflows:
+  deploy:
+    jobs:
+      - deploy:
+          context:
+            - keys
+
+jobs:
+  deploy:
+        docker:
+          - image: cimg/base:latest
+        resource_class: small
+        steps:
+          - checkout
+          - run: git clone https://github.com/william-exe-v4/williamv4org.git
+          - run: git clone https://gitlab.com/William-exe-v4/williamv4orgwebhost.git
+          - run: rm williamv4org/.git
+          - run: mv williamv4orgwebhost/.git williamv4/.git
+          - run: cd williamv4org
+          - run: git commit -m "circleci update"
+          - run: git push https://gitlab.com/William-exe-v4:$glamogus@gitlab.com/William-exe-v4/williamv4orgwebhost.git
