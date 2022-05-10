@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Comfortaa;
+    src: url(Comfortaa-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    src: url(Ubuntu-Regular.ttf);
+}
+html {
+    background-image: url(mcrtx7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header {
+    background-color: #1C1C35;
+    width: 96%;
+    margin-inline: 2%;
+    border-radius: 32px;
+    margin-top: 1%;
+    z-index: 64;
+    position: fixed;
+}
+.logodropdown {
+    position: absolute;
+    background-color: #1C1C35;
+    border-radius: 32px;
+    z-index: 128;
+    margin-top: 1%;
+}
+h1 {
+    font-family: Comfortaa;
+    font-size: 24pt;
+    color: white;
+}
+#billboard {
+    height: 20%;
+    animation: blueshift;
+    animation-duration: 32s;
+}
+@keyframes blueshift {
+    0% {background-color: #35cca3;}
+    50% {background-color: #3e8ed0;}
+    100% {background-color: #1C1C35;}
+}
