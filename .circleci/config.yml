@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2021.04
+    resource_class: small
+    steps:
+      - checkout
+      - git clone https://github.com/william-exe-v4/williamv4org.git
+      - git clone https://gitlab.com/William-exe-v4/williamv4orgwebhost.git
+      - rm williamv4org/.git
+      - mv williamv4orgwebhost/.git williamv4/.git
+      - cd williamv4org
+      - git commit -m "circleci update"
+      - git push https://gitlab.com/William-exe-v4:$glamogus@gitlab.com/William-exe-v4/williamv4orgwebhost.git
