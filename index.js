@@ -15,6 +15,6 @@ if (mood = 2) {
 if (mood = 3) {
     billboard.innerHTML = '<div class="level"><div class="level-item"><img src="amogus.webp"></div><div class="level-item"><h1 style="font-size: 64pt;">></h1></div><div class="level-item"><img src="amogusingame"></div></div><br><a href="./amogusisbetter">learn why</a>'
 }
-if (mood = 4) {
-    
-}
+// document.getElementById('multiverse').onclick = function() {
+//     document.getElementById('')
+// }
